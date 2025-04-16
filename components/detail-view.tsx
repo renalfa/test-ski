@@ -18,6 +18,7 @@ const DetailView: FC<Props> = ({ selected }) => {
         height={500}
         className="w-full h-80 object-cover rounded-xl"
       />
+      <h2 className="text-2xl font-bold ml-4">{selected.name}</h2>
       <div className="flex items-center ml-4 bg-black text-white rounded-lg px-4 py-2 w-fit text-xs">
         <FaLocationDot />
         <span className="ml-2">
