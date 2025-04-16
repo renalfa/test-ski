@@ -1,9 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import MapView from "@/components/map-view";
-import { destinations } from "@/data/destinations";
+import dynamic from "next/dynamic";
+
+const MapView = dynamic(() => import("@/components/map-view"), {
+  ssr: false,
+});
 import DetailView from "@/components/detail-view";
+
+import { destinations } from "@/data/destinations";
 
 const Home = () => {
   const [selectedId, setSelectedId] = useState<number>(1);
